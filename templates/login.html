@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Form based App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style type="text/css">
+  body{
+    padding: 20vh;
+  }
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Sample Application for Form based Login/Authentication</h3>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong style="color: red">Error:</strong> {{ error }}
+      {% endif %}
+      <hr></hr>
+      <p style="color: gray">Designed with <img src="/static/heart.png"></img> by DevopsJunction.com</p>
+    </div>
+  </body>
+</html>
