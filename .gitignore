@@ -1,0 +1,4 @@
+__pycache__/
+Procfile
+venv
+.DS_Store
